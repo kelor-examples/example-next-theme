@@ -1,0 +1,32 @@
+{
+  "title": "Theme switching",
+  "category": "UI",
+  "packages": [
+    {
+      "file": "package.json",
+      "dependencies": {
+        "next-themes": "^0.4.6"
+      }
+    }
+  ],
+  "addedFiles": [
+    {
+      "source": "theme-provider.tsx",
+      "target": "src/components/theme-provider.tsx"
+    }
+  ],
+  "replacements": [
+    {
+      "targetFile": "src/app/providers.tsx",
+      "placeholder": "// kelor:imports",
+      "value": "import { ThemeProvider } from \"@/components/theme-provider\";",
+      "mode": "append"
+    },
+    {
+      "targetFile": "src/app/providers.tsx",
+      "placeholder": "// kelor:wrappers",
+      "value": "ThemeProvider,",
+      "mode": "append"
+    }
+  ]
+}
